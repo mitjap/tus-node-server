@@ -63,6 +63,7 @@
     "@google-cloud/storage": "^6.2.2",
     "aws-sdk": "^2.1064.0",
     "configstore": "^5.0.1",
-    "debug": "^4.3.3"
+    "debug": "^4.3.3",
+    "mongodb": "^4.8.0"
   }
 }

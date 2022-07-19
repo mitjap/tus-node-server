@@ -3,6 +3,7 @@
 const path = require('path');
 const fs = require('fs');
 const assert = require('assert');
+const GridFSStore = require('../lib/stores/GridFSStore');
 
 const Server = require('../index').Server;
 const FileStore = require('../index').FileStore;
@@ -38,6 +39,10 @@ switch (data_store) {
             region: process.env.AWS_REGION,
             partSize: 8 * 1024 * 1024, // each uploaded part will have ~8MB,
         });
+        break;
+
+    case 'GridFSStore':
+        server.datastore = new GridFSStore({});
         break;
 
     default:
